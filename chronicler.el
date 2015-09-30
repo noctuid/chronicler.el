@@ -105,6 +105,13 @@ Return t when point has moved oherwise nil."
     (org-forward-heading-same-level arg invisible-ok)
     (not (= (point) last-point))))
 
+(defun -forward-text-start-or-max-point ()
+  "Go to next non-empty line or the max point."
+  (forward-line)
+  (when (looking-at (rx (and bol eol)))
+    (unless (re-search-forward (rx (and bol char)) nil t)
+      (goto-char (point-max)))))
+
 (defun count-words-for-heading (&optional recount)
   "Count all words under the current heading and sub-headings when not ignored.
 RECOUNT determines whether to recount sub-headings or just take values
@@ -138,8 +145,8 @@ drawers, and planning sections (e.g. SCHEDULED:...)."
                                        (+ wc (string-to-number heading-wc)))
                                  (unless (-forward-heading-same-level 1 t)
                                    (goto-char end-bound)))
-                             (forward-line)))
-                       (forward-line)))))
+                             (-forward-text-start-or-max-point)))
+                       (-forward-text-start-or-max-point)))))
            ((or (org-at-comment-p)
                 (org-at-block-p)
                 (org-at-drawer-p)
