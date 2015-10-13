@@ -15,9 +15,13 @@ This package also gives full control over which headings are taken into consider
 #+end_src
 
 This default can be overridden by changing the properties (in an org property drawer) for a specific heading:
+
 =:count:= will count text directly under a heading but won't affect any sub-headings.
+
 =:no-count:= will prevent text directly under a heading from being counted but won't affect any subheadings.
+
 =:count-recursive:= will change the default setting to count the current heading as well as all sub-headings.
+
 =:no-count-recursive:= will change the default setting to ignore the current heading as well as all sub-headings.
 
 Count settings will override ignore settings if you happen to have a heading with both properties. If a heading is tagged with both =:no-count:= and =:count-recursive:=, the text directly under the heading will be ignored, but all sub-headings will be counted by default (assuming there are not additional count or ignore properties added to them). An example use case of this is where there is some description text under a heading that you do not wish to count, but the text under all the sub-headings does actually correspond to writing.
