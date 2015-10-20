@@ -43,7 +43,7 @@
   "The default behavior for whether to ignore the contents of a heading."
   :type 'boolean)
 
-(defcustom store-dir "./.chronicler/"
+(defcustom store-dir ".chronicler/"
   "Directory to store heading information in.
 The path can either be absolute or relative to the current directory."
   :type 'string)
