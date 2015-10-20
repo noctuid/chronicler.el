@@ -39,11 +39,11 @@ Since this may be confusing, I have created a table. The first value corresponds
 |--------------------+----------------+----------------+-----------------+--------------------|
 
 * Other User Alterable Options
-~store-dir~ is a string that determines where information should be stored. It defaults to =./.chronicler/= but can also be an absolute path.
+~chronicler-store-dir~ is a string that determines where information should be stored. It defaults to =.chronicler/= but can also be an absolute path (if you only want one storage directory).
 
-~day-start-time~ is the time (0-23) at which counts should be reset and stored for a new day. Setting this to 0 will ensure that daily counts actually correspond to the day they are written on. However, the default value is 4 (4am) since it seems more likely that a user will want each day to correspond to a period of being awake, and a writing session can easily last past midnight.
+~chronicler-day-start-time~ is the time (0-23) at which counts should be reset and stored for a new day. Setting this to 0 will ensure that daily counts actually correspond to the day they are written on. However, the default value is 4 (4am) since it seems more likely that a user will want each day to correspond to a period of being awake, and a writing session can easily last past midnight.
 
-~daily-wc-goal~ is the goal word count for comparison.
+~chronicler-daily-wc-goal~ is the goal word count for comparison.
 
 * Basic usage
 ~chronicler-update-word-counts~ will calculate and store counts for all non-ignored headings for the current day. Each day's progress will be stored separately, and chronicler will automatically reset progress after the ~chronicler-day-start-time~.
