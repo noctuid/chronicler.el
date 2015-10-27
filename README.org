@@ -1,6 +1,8 @@
 * About
 =chronicler.el= is an emacs package primarily for tracking writing statistics for org files. 
 
+DISCLAIMER: This package is in an early stage of development and may change drastically or break. I will put it on MELPA after I've added more features and it has become relatively stable.
+
 A goal of the project is to be able to quickly and accurately analyze very large files with many headings (even up to 300k+ words). For files not even close to this size, I've found emacs lisp to be too slow, so the [[https://github.com/noctuid/cl-chronicler][chronicler]] command line program is required for this package to function. The fact that the work is offloaded to an external program also means that a similar plugin could also be written fairly easily for vim (e.g. for use with [[https://github.com/dhruvasagar/vim-dotoo][vim-dotoo]]) or another programmable text editor.
 
 If you have any suggestions for additional functionality, please make an issue.
