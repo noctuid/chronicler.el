@@ -1,6 +1,6 @@
 ;;; chronicler.el --- Statistics for writing in org mode.
 
-;; Author: Lit Wakefield <noct@openmailbox.org>
+;; Author: Fox Kiester <noct@openmailbox.org>
 ;; URL: https://github.com/noctuid/chronicler
 ;; Created: September 25, 2015
 ;; Keywords: org, writing, prose, words
